@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COMP 2132 - final assignment</title>
+    <!-- import external css -->
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- import jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer="defer" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- import external js -->
+    <script src="scripts/index.js" defer="defer"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dice Game</h1>
+        <div class="prompt">
+            <div class="rules">
+                <h2>Rules</h2>
+                <ul>
+                    <li>Choose how many players you would like to play the game.</li>
+                    <li>Each player rolls a pair of dice 3 times.</li>
+                    <li>For each roll, the player's score is the total value of the 2 dice.</li>
+                    <li>If any of the 2 dice comes up as a 1, score for that round for the player is 0.</li>
+                    <li>If the player rolls a pair of the same numbers, score for that round will be doubled.</li>
+                    <li>After the 3rd roll of the dice, player with the highest score wins.</li>
+                </ul>
+            </div>
+            <div id="choices">
+                <button type="button">2 Players</button>
+                <button type="button">3 Players</button>
+                <button type="button">4 Players</button>
+                <button type="button">5 Players</button>
+                <button type="button">6 Players</button>
+                <button type="button">7 Players</button>
+                <button type="button">8 Players</button>
+            </div>
+        </div>
+
+        <div class="field">
+        </div>
+
+        <div class="controls">
+            <button id="roll_dice">Roll Dice</button>
+            <button id="new_game">New Game</button>
+        </div>
+    </div>
+
+    <div id="popup" class="modal">
+        <div class="popup_content">
+            <span class="close">&times;</span>
+            <p>Result of the game will show up here...</p>
+        </div>
+    </div>
+</body>
+
+</html>

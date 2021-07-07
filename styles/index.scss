@@ -1,0 +1,130 @@
+// SASS variables
+$themeColor: yellow;
+$popColor: brown;
+$borderRadius: 10px;
+
+// SASS mixin
+@mixin button ($vertical-margin, $horizontal-margin, $vertical-padding, $horizontal-padding) {
+    margin: $vertical-margin $horizontal-margin;
+    padding: $vertical-padding $horizontal-padding;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: slategrey;
+}
+
+h1 {
+    text-align: center;
+    background-color: yellow;
+    margin: 0;
+    padding: 20px 0;
+    font-size: 3rem;
+}
+
+// all buttons
+button{
+    @include button (20px, 3px, 10px, 20px);
+    border: 1px solid grey;
+    border-radius: $borderRadius;
+    background-color: $themeColor;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+// display rules of the game
+.rules{
+    padding: 50px 80px;
+    h2{
+        text-align: center;
+        text-decoration: underline;
+        font-size: 1.8rem;
+    }
+    li{
+        font-size: 1.4rem;
+    }
+}
+
+// roll dice btn, new game btn
+.controls{
+    display: none;
+    margin: 0 auto;
+}
+
+// popup
+.modal{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 30px;
+    width: 800px;
+    height: 180px;
+    border-radius: $borderRadius;
+    box-shadow: darkgoldenrod 0 0 4px 6px;
+    background-color: $themeColor;
+    p{
+        font-size: 2rem;
+        font-weight: bold;
+        color: $popColor;
+    }
+}
+
+// popup close btn
+.close{
+    float: right;
+    font-size: 2rem;
+    &:hover{
+        color: grey;
+        cursor: pointer;
+    }
+}
+
+.field{
+    display: flex;
+    justify-content: space-around;
+}
+
+.column{
+    margin: 0 auto;
+}
+
+.player-name{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+// scores for the round and total
+.round,
+.total{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $popColor;
+}
+
+// wrapper
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 970px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: white;
+}
+
+// display round number
+#round{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
